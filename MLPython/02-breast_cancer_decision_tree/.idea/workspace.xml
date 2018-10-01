@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1a2b592-021e-4792-b80c-8a166f376919" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01-iris-classifier/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f7c02ad9-6f0d-42ba-8921-6c395bf8d040" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../01-iris-classifier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01-iris-classifier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-breast_cancer_classifier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-breast_cancer_classifier/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-linear-clasifier/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-linear-clasifier/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,10 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="297975590">
+    <session id="1900721492">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -32,18 +35,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="586" />
+          <entry key="py" value="183" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="586" />
+          <entry key="Python" value="183" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -56,9 +72,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="602" />
+    <option name="x" value="756" />
     <option name="y" value="23" />
-    <option name="width" value="1078" />
+    <option name="width" value="924" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -71,8 +87,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="breast_cancer_classifier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="breast_cancer_classifier" type="462c0819:PsiDirectoryNode" />
+              <item name="02-breast_cancer_decision_tree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="02-breast_cancer_decision_tree" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -80,9 +96,6 @@
       </pane>
       <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -97,8 +110,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="breast_cancer_classifier" type="PythonConfigurationType" factoryName="Python">
-      <module name="breast_cancer_classifier" />
+    <configuration name="breast_cancer_decision_tree" type="PythonConfigurationType" factoryName="Python">
+      <module name="02-breast_cancer_decision_tree" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -124,27 +137,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e1a2b592-021e-4792-b80c-8a166f376919" name="Default Changelist" comment="" />
-      <created>1538273306587</created>
+      <changelist id="f7c02ad9-6f0d-42ba-8921-6c395bf8d040" name="Default Changelist" comment="" />
+      <created>1538357349700</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1538273306587</updated>
+      <updated>1538357349700</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="602" y="23" width="1078" height="979" extended-state="0" />
+    <frame x="756" y="23" width="924" height="979" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08049887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3298611" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32919955" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298611" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -162,8 +176,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="352">
+          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
