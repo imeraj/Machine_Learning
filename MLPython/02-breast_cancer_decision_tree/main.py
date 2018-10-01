@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import graphviz
 
-def plot_feature_importances_cancer(model):
+def plot_feature_importances_cancer(model, cancer):
     n_features = cancer.data.shape[1]
     plt.barh(range(n_features), model.feature_importances_, align='center')
     plt.yticks(np.arange(n_features), cancer.feature_names)
@@ -30,4 +30,4 @@ with open("tree.dot") as f:
     graphviz.Source(dot_graph).view()
 
 print("Feature importances:\n{}".format(tree.feature_importances_))
-plot_feature_importances_cancer(tree)
+plot_feature_importances_cancer(tree, cancer)
