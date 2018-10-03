@@ -30,3 +30,9 @@ print("Predicted target name: {}".format(iris_dataset['target_names'][prediction
 
 print("Test set predictions:\n {}".format(y_pred))
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
+
+print("Predicted probabilities:\n{}".format(knn.predict_proba(X_test)[:6]))
+print("Sums {}".format(knn.predict_proba(X_test)[:6].sum(axis=1)))
+
+print("Argmax of decision function: {}".format(np.argmax(knn.predict_proba(X_test), axis=1)[:10]))
+print("Argmax combined with classes_: {}".format(iris_dataset['target_names'][np.argmax(knn.predict_proba(X_test), axis=1)][:10]))
