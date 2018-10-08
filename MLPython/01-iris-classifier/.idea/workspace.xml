@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31cdb131-298a-4f99-b3c5-770e14fa600f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../02-breast-cancer-neural-network/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-breast-cancer-neural-network/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-eigenfeces-svm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-eigenfeces-svm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-pca-breast-cancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-pca-breast-cancer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03-tsne-digits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03-tsne-digits/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../iris-data-analysis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../iris-data-analysis/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,13 +18,14 @@
     <session id="-783528268">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="358">
+              <caret line="39" selection-start-line="39" selection-end-line="40" selection-end-column="73" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -82,7 +86,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="602" />
     <option name="y" value="23" />
     <option name="width" value="1078" />
     <option name="height" value="979" />
@@ -168,10 +171,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="602" y="23" width="1078" height="979" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1078" height="979" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26254827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27220076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,7 +184,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3298611" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -198,8 +200,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="358">
+          <caret line="39" selection-start-line="39" selection-end-line="40" selection-end-column="73" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
