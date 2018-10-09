@@ -2,6 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -93,8 +94,62 @@ def plot_cv(cv, features, labels):
 
 plot_cv(StratifiedKFold(n_splits=10), all_inputs, all_labels)
 
-random_forest_classifier = RandomForestClassifier(n_estimators=4)
+random_forest_classifier = RandomForestClassifier()
 cv_scores = cross_val_score(random_forest_classifier, all_inputs, all_labels, cv=10)
 plt.hist(cv_scores)
 plt.title('Average score: {}'.format(np.mean(cv_scores)))
 plt.show()
+
+training_inputs, testing_inputs, training_classes, testing_classes \
+        = train_test_split(all_inputs, all_labels, test_size=0.25)
+
+parameter_grid = {
+                    'max_depth': [1, 2, 3, 4, 5],
+                'max_features' : [1, 2, 3, 4]
+                 }
+cross_validation = StratifiedKFold(n_splits=10)
+grid_search = GridSearchCV(random_forest_classifier, param_grid=parameter_grid, cv=cross_validation)
+grid_search.fit(training_inputs, training_classes)
+print('Best score: {}'.format(grid_search.best_score_))
+print('Best parameters: {}'.format(grid_search.best_params_))
+
+grid_visualization = grid_search.cv_results_['mean_test_score']
+grid_visualization.shape = (5, 4)
+sb.heatmap(grid_visualization, cmap='Blues', annot=True)
+plt.xticks(np.arange(4) + 0.5, grid_search.param_grid['max_features'])
+plt.yticks(np.arange(5) + 0.5, grid_search.param_grid['max_depth'])
+plt.xlabel('max_features')
+plt.ylabel('max_depth')
+plt.show()
+
+parameter_grid = {'criterion': ['gini', 'entropy'],
+                  'n_estimators': [10, 25, 50, 100],
+                  'max_depth': [1, 2, 3, 4, 5],
+                  'max_features': [1, 2, 3, 4]}
+
+cross_validation = StratifiedKFold(n_splits=10)
+
+grid_search = GridSearchCV(random_forest_classifier,
+                           param_grid=parameter_grid,
+                           cv=cross_validation)
+
+grid_search.fit(training_inputs, training_classes)
+print('Best score: {}'.format(grid_search.best_score_))
+print('Best parameters: {}'.format(grid_search.best_params_))
+print(grid_search.best_estimator_)
+
+random_forest_classifier = grid_search.best_estimator_
+cv_scores = cross_val_score(random_forest_classifier, training_inputs, training_classes, cv=10)
+plt.hist(cv_scores)
+plt.title('Average score: {}'.format(np.mean(cv_scores)))
+plt.show()
+
+rf_df = pd.DataFrame({'accuracy': cross_val_score(random_forest_classifier, training_inputs, training_classes, cv=10),
+                       'classifier': ['Random Forest'] * 10})
+sb.boxplot(x='classifier', y='accuracy', data=rf_df)
+sb.stripplot(x='classifier', y='accuracy', data=rf_df, jitter=True, color='black')
+plt.show()
+
+random_forest_classifier.fit(training_inputs, training_classes)
+classifier_accuracy = random_forest_classifier.score(testing_inputs, testing_classes)
+print("Accuracy = {}".format(classifier_accuracy))
