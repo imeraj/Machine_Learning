@@ -4,6 +4,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import load_files
 from sklearn.model_selection import GridSearchCV
 import numpy as np
+import mglearn
+import matplotlib.pyplot as plt
 
 reviews_train = load_files("aclImdb/train/")
 text_train, y_train = reviews_train.data, reviews_train.target
@@ -22,7 +24,7 @@ print("Number of documents in test data: {}".format(len(text_test)))
 print("Samples per class (test): {}".format(np.bincount(y_test)))
 text_test = [doc.replace(b"<br />", b" ") for doc in text_test]
 
-vect = CountVectorizer(min_df=5)
+vect = CountVectorizer(min_df=5, ngram_range=(2, 2))
 X_train = vect.fit(text_train).transform(text_train)
 X_test = vect.transform(text_test)
 
@@ -40,11 +42,15 @@ scores = cross_val_score(LogisticRegression(), X_train, y_train, cv=5)
 print("Mean cross-validation accuracy: {:.2f}".format(np.mean(scores)))
 
 param_grid = {'C': [0.001, 0.01, 0.1, 1, 10]}
+
 grid = GridSearchCV(LogisticRegression(), param_grid, cv=5)
 grid.fit(X_train, y_train)
 print("Best cross-validation score: {:.2f}".format(grid.best_score_))
 print("Best parameters: ", grid.best_params_)
 print("Best estimator: ", grid.best_estimator_)
+
+mglearn.tools.visualize_coefficients(grid.best_estimator_.coef_, feature_names, n_top_features=25)
+plt.show()
 
 lr = grid.best_estimator_
 lr.fit(X_train, y_train)
